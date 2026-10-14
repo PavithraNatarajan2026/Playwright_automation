@@ -9,9 +9,7 @@ await expect(page.getByRole('link' , { name: 'Popups' })).toBeVisible();
      await expect(page).toHaveURL('https://practice-automation.com/popups/');
 
  
- const alertButton = page.getByRole('button', {
-  name: 'Alert Popup'
-});
+ const alertButton = page.getByRole('button', { name: 'Alert Popup'});
 
 await expect(alertButton).toBeVisible();
 
@@ -23,9 +21,7 @@ page.once('dialog', async (dialog) => {
 
 await alertButton.click();
 
-const confirmButton = page.getByRole('button', {
-  name: 'Confirm Popup'
-});
+const confirmButton = page.getByRole('button', {name: 'Confirm Popup'});
 
 await expect(confirmButton).toBeVisible();
 
@@ -46,9 +42,7 @@ page.once('dialog', async (dialog) => {
 
 await confirmButton.click();
 
-const promptButton = page.getByRole('button', {
-  name: 'Prompt Popup'
-});
+const promptButton = page.getByRole('button', {name: 'Prompt Popup'});
 
 await expect(promptButton).toBeVisible();
 

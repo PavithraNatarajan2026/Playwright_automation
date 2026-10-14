@@ -9,13 +9,9 @@ test('Handle Slider', async ({ page }) => {
   await expect(sliderLink).toBeVisible();
   await sliderLink.click();
 
-  await expect(
-    page.getByRole('heading', { name: 'Sliders' })
-  ).toBeVisible();
+  await expect( page.getByRole('heading', { name: 'Sliders' })).toBeVisible();
 
-  await expect(page).toHaveURL(
-    'https://practice-automation.com/sliders/'
-  );
+  await expect(page).toHaveURL('https://practice-automation.com/sliders/');
 
   const slider = page.locator('input[type="range"]');
 
