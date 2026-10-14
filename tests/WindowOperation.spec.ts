@@ -15,14 +15,10 @@ test('Verify window operations', async ({ page, context }) => {
   await expect(newTab).not.toHaveURL('about:blank');
   await newTab.close();
 
-  await expect(originalPage).toHaveURL(
-    'https://practice-automation.com/window-operations/'
-  );
+  await expect(originalPage).toHaveURL('https://practice-automation.com/window-operations/');
 
   await page.getByRole('button', { name: 'Replace Window' }).click();
-  await expect(page).not.toHaveURL(
-    'https://practice-automation.com/window-operations/'
-  );
+  await expect(page).not.toHaveURL('https://practice-automation.com/window-operations/');
 
   await page.goto('https://practice-automation.com/window-operations/');
 
